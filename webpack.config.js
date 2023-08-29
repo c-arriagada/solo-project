@@ -6,6 +6,7 @@ module.exports = {
 
     output: {
         path: path.join(__dirname, '/dist'),
+        publicPath: '/',
         filename: 'bundle.js'
     },
 
@@ -15,10 +16,19 @@ module.exports = {
         })
     ],
 
+    devServer: {
+        proxy: {
+            '/**': {
+                target: 'http://localhost:3000/',
+                secure: false,
+            }
+        }
+    },
+
     module: {
         rules: [
             {
-                test: /\.js$/, // transpile all files that end in .js
+                test: /.(js|jsx)$/, // transpile all files that end in .js
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -26,7 +36,11 @@ module.exports = {
                         presets: ['@babel/preset-env', '@babel/preset-react']
                     }
                 }
-            }
+            },
+            {
+                test: /.(css|scss)$/,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
+            },
         ]
     }
 

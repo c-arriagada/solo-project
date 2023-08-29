@@ -1,5 +1,8 @@
 import React from 'react';
-import ReactDom from 'react-dom';
-import App from './components/App';
+import { render } from 'react-dom';
+import App from './components/App.jsx'; // needed to add jsx, if not it showed a compiled error
 
-ReactDom.render(<App />, document.getElementById('root'));
+render(
+    <App />, 
+    document.getElementById('root')
+);

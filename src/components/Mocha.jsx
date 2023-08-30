@@ -2,15 +2,18 @@ import React, { useEffect, useState } from "react";
 import mocha from '../assets/mocha1.jpg'
 
 
-const Mocha = () => {
+const Mocha = (props) => {
+    const { description, created_at, location } = props;
+
     return (
         <article className="mochaCard">
             <div className="photoContainer">
                 <img src={mocha} alt="mocha photo" />
             </div>
             <div className="mochaDetailList">
-                <p className="mochaLocation">The Perfect Cup</p>
-                <p className="mochaDetail">Delicious chocolaty mocha!</p>
+                <p className="mochaDetail">{created_at}</p>
+                <p className="mochaLocation">{location}</p>
+                <p className="mochaDetail">{description}</p>
             </div>
         </article>
     );

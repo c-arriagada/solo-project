@@ -38,8 +38,8 @@ module.exports = {
                 }
             },
             {
-                test: /.(css|scss)$/,
-                use: ['style-loader', 'css-loader', 'sass-loader'],
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -47,7 +47,7 @@ module.exports = {
                     {
                         loader: 'url-loader',
                         options: {
-                            mimetype: 'image/png',
+                            limit: 8192,
                         }
                     }
                 ]

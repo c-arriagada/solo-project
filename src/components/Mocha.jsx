@@ -9,8 +9,8 @@ const Mocha = () => {
                 <img src={mocha} alt="mocha photo" />
             </div>
             <div className="mochaDetailList">
-                <p className="mochaDetail">Description: Delicious chocolaty mocha!</p>
-                <p className="mochaDetail">Location: The Perfect Cup</p>
+                <p className="mochaLocation">The Perfect Cup</p>
+                <p className="mochaDetail">Delicious chocolaty mocha!</p>
             </div>
         </article>
     );

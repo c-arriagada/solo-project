@@ -1,0 +1,76 @@
+/* *,
+*:before,
+*:after {
+  box-sizing: inherit;
+  position: relative;
+} */
+html {
+    background-color: rgb(247, 240, 232);
+}
+header {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+body {
+    padding-top: 1em;
+    font-family: 'Source Sans Pro', sans-serif;
+    
+  }
+
+h1 {
+    padding-left: 1em;
+    color:rgb(6, 189, 189)
+    
+}
+
+/* .mochaCard {
+    display: grid;
+    grid-row-gap: 0.75rem;
+    margin: 0.5rem;
+} */
+
+.mochasContainer {
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 3, 1fr;
+}
+
+.mochaCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(241, 225, 204);
+    width: 280px;
+    border-radius: 3px;
+    border: 1px solid rgb(230, 212, 187)
+}
+
+.photoContainer {
+    margin-top: 10px;
+}
+
+.mochaDetailList {
+    font-size: .9em;
+    width: 240px;
+    line-height: 0.8em;
+    color: rgb(17, 17, 18);
+}
+
+.mochaLocation {
+    font-weight: bold;
+}
+
+.reviewButton{
+    background-color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    color: rgb(9, 152, 152);
+    border: solid 1px;
+    border-color: rgb(33, 172, 172);
+    border-radius: 3px;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+
+

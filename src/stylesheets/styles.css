@@ -20,7 +20,7 @@ body {
 
 h1 {
     padding-left: 1em;
-    color:rgb(6, 189, 189)
+    color:rgb(86, 39, 7)
     
 }
 
@@ -40,7 +40,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(241, 225, 204);
+    background-color: rgb(237, 159, 57);
     width: 280px;
     border-radius: 3px;
     border: 1px solid rgb(230, 212, 187)
@@ -62,11 +62,11 @@ h1 {
 }
 
 .reviewButton{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(138, 62, 12);
     font-size: 1.2rem;
-    color: rgb(9, 152, 152);
+    color: rgb(244, 237, 232);
     border: solid 1px;
-    border-color: rgb(33, 172, 172);
+    border-color: rgb(86, 39, 7);
     border-radius: 3px;
     margin-right: 5%;
     margin-left: 5%;

@@ -9,3 +9,5 @@ const DisplayReviews = () => {
         </section>
     )
 };
+
+export default DisplayReviews;

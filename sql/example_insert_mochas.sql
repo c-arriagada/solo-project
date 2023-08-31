@@ -6,3 +6,5 @@ INSERT INTO mochas(id, created_at, photo, description, restaurant_id) VALUES (1,
 INSERT INTO mochas(created_at, photo, description, restaurant_id) VALUES ('2023-08-22 19:10:25-07', 'abc', 'Great mocha!', 1);
 
 INSERT INTO mochas(photo, description, restaurant_id) VALUES ('abc', 'Great mocha!', 1);
+
+INSERT INTO reviews(rating, comment, mocha_id, created_by) VALUES (5, 'Lovely combo of coffee and chocolate', 2, 'Caheri');

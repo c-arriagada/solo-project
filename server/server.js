@@ -18,7 +18,7 @@ app.get('/mochas', mochaAppController.getMocha, (req, res) => {
     res.send(res.locals.mochas);
 });
 
-app.get('/reviews/:id', (req,res) => {
+app.get('/reviews/:id', mochaAppController.getReviews, (req,res) => {
     res.send(res.locals.reviews);
 })
 

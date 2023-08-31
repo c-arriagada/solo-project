@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Review = (props) => {
     // const {isVisible} = props;
+
+    
+
 
     return (
         <form className="addReview" action="">

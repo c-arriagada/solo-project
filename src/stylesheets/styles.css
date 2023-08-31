@@ -73,7 +73,7 @@ h1 {
 
 p {
     line-height: 24px;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 .photoContainer {
@@ -92,9 +92,9 @@ p {
     font-weight: bold;
 }
 
-.reviewButton{
+.reviewButton, .displayReviewsButton {
     background-color: rgb(138, 62, 12);
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     color: rgb(244, 237, 232);
     border: solid 1px;
     border-color: rgb(86, 39, 7);
@@ -103,7 +103,13 @@ p {
     margin-left: 5%;
   }
 
-  .addReview {
+  .buttonContainer {
+    display: flex; 
+    flex-direction: row;
+    padding-bottom: 10px;
+  }
+
+  .addReview, .reviewDisplay {
     background-color:rgb(237, 159, 57);
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;

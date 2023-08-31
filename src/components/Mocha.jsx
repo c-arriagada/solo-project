@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Review from "./Review.jsx";
 import DisplayReviews from './DisplayReviews.jsx';
-import mocha from '../assets/mocha1.jpg';
+import mocha_0 from '../assets/mocha0.jpg';
+import mocha_1 from '../assets/mocha1.jpg';
+import mocha_2 from '../assets/mocha2.jpg';
 
 
 const Mocha = (props) => {
-    const { description, created_at, name } = props;
+    const { description, created_at, name, mocha_id} = props;
     // const [showReview, setReview] = useState(false); // state management to show review on click
     // const [displayReview, setDisplayReview] = useState(false);
     const [display, setDisplay] = useState("product"); // display will change based on this state - 3 possible states
@@ -19,11 +21,16 @@ const Mocha = (props) => {
 
     const handleSeeReviewsClick = (e) => {
         e.preventDefault();
+        console.log(e.target.tagName);
         console.log('The see reviews button was clicked.');
         // setDisplayReview(true);
         // setReview(false);
         setDisplay("seeReview");
     }
+
+    useEffect(() => {
+        
+    });
 
     const exampleReview = [
         {
@@ -42,7 +49,7 @@ const Mocha = (props) => {
             'product':
             <div className="mochaInnerCard">
             <div className="photoContainer">
-                <img src={mocha} alt="mocha photo" />
+                <img src={mocha_1} alt="mocha photo" />
             </div>
             <div className="mochaDetailList">
                 <p className="mochaDetail">{created_at}</p>
@@ -55,7 +62,14 @@ const Mocha = (props) => {
             </div>
             </div>,
             'addReview': <Review />,
-            'seeReview': <DisplayReviews/> 
+            'seeReview': exampleReview.map((el, index) => {
+                return <DisplayReviews //don't forget to return
+                key={`review ${index}`}
+                rating={el.rating} 
+                comment={el.comment} 
+                created_by={el.created_by} 
+                created_at={new Date(el.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}/>
+            })
             } [display]
         }
         </article>

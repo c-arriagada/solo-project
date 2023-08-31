@@ -9,7 +9,13 @@ const Mocha = (props) => {
 
     const handleClick = (e) => {
         e.preventDefault();
-        console.log('The link was clicked.');
+        console.log('The add review button was clicked.');
+        setReview(true);
+    }
+
+    const handleSeeReviewsClick = (e) => {
+        e.preventDefault();
+        console.log('The see reviews button was clicked.');
         setReview(true);
     }
 
@@ -28,6 +34,7 @@ const Mocha = (props) => {
             </div>
             <div className="buttonContainer">
             <button type="button" className='reviewButton' onClick={handleClick}>Add Review </button>
+            <button type="button" className='displayReviewsButton' onClick={handleSeeReviewsClick}>See Reviews </button>
             </div>
             </div> 
             }

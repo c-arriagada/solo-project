@@ -18,9 +18,13 @@ app.get('/mochas', mochaAppController.getMocha, (req, res) => {
     res.send(res.locals.mochas);
 });
 
+app.get('/reviews/:id', (req,res) => {
+    res.send(res.locals.reviews);
+})
+
 // trying to connect end point to add review button - DELETE
 app.get('/addReview', (req, res) => {
-    res.send(fs.readFile(path.resolve(__dirname, './components/Review.jsx')));
+    res.send(fs.readFile(path.resolve(__dirname, './components/Review.jsx'))); // might not work
 });
 
 //global error handler

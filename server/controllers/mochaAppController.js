@@ -14,4 +14,18 @@ mochaAppController.getMocha = (req, res, next) => {
     )
 }
 
+mochaAppController.getReviews = (req, res, next) =>{
+
+    const id = req.params.id;
+    db.query(
+        'SELECT * FROM reviews WHERE mocha_id = $1', 
+        [id], 
+        data => {
+            console.log(data)
+            res.locals.reviews = data.rows;
+            return next();
+        }
+    )
+}
+
 module.exports = mochaAppController;

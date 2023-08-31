@@ -4,7 +4,7 @@ const Review = (props) => {
     // const {isVisible} = props;
 
     return (
-        <form className="add_review" action="">
+        <form className="addReview" action="">
             <label for="comment">Comment:</label><br/>
             <input type="text" id="comment" name="comment" /><br />
             <label for="rating">Rating:</label><br />

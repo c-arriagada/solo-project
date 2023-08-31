@@ -7,6 +7,18 @@
 html {
     background-color: rgb(247, 240, 232);
 }
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mochaLogo {
+    width: 3em;
+    height: 3em;
+}
+
 header {
     display: flex;
     justify-content: flex-end;
@@ -19,8 +31,12 @@ body {
   }
 
 h1 {
-    padding-left: 1em;
-    color:rgb(86, 39, 7)
+    padding-left: 0.2em;
+    /* font-family: "Lato", sans-serif; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /* font-weight: 700; */
+    color:rgb(86, 39, 7);
+    margin-bottom: 0;
     
 }
 
@@ -31,30 +47,42 @@ h1 {
 } */
 
 .mochasContainer {
-    padding: 3em;
+    padding: 2em;
     /* display: grid;
     grid-template-columns: 3, 1fr; */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    /* align-items: space-between; */
 }
 
 .mochaCard {
+    margin-top: 3%;
+    padding: 0.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     background-color: rgb(237, 159, 57);
-    width: 280px;
-    border-radius: 3px;
-    border: 1px solid rgb(230, 212, 187)
+    width: 25%; /* to make changes to width of*/
+    /* height: 25%; */
+    border-radius: 5px;
+    border: 1px solid rgb(230, 212, 187);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    line-height: 24px;
+    font-size: 1em;
 }
 
 .photoContainer {
     margin-top: 10px;
+    align-items: center;
 }
 
 .mochaDetailList {
-    font-size: .9em;
+    /* font-size: .9em; */
     width: 240px;
     line-height: 0.8em;
     color: rgb(17, 17, 18);
@@ -76,8 +104,20 @@ h1 {
   }
 
   .addReview {
-    background-color: rgb(161, 92, 46);
+    background-color:rgb(237, 159, 57);
     font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 6em;
+    line-height: 2;
+  }
+
+  /* .buttonContainer {
+    display: flex;
+    align-items: center;
+  } */
+
+  .reviewButton {
+    text-align:end;
   }
 
 

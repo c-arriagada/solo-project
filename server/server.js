@@ -10,9 +10,9 @@ const port = 3000;
 app.use(express.json());
 
 
-app.get('/hello', (req, res) => {
-    res.send('Hello World');
-});
+// app.get('/hello', (req, res) => {
+//     res.send('Hello World');
+// });
 
 app.get('/mochas', mochaAppController.getMocha, (req, res) => {
     res.send(res.locals.mochas);
